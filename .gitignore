@@ -30,3 +30,5 @@ replay_pid*
 
 mandelbrot.png
 mandelbrot_results*.csv
+.idea
+*.iml

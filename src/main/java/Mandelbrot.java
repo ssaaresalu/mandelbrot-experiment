@@ -305,21 +305,6 @@ public class Mandelbrot {
         Config c = new Config();
         for (int i = 0; i < args.length; i++) {
             String option = args[i];
-            if ("--help".equals(option) || "-h".equals(option)) {
-                System.out.println("Usage: java main.java.Mandelbrot [options]\n"
-                        + "  --method all|sequential|executor|forkjoin|stream  (default all)\n"
-                        + "  --threads 1,2,4,8   Worker counts for parallel methods\n"
-                        + "  --width 1920        Image width (minimum 2)\n"
-                        + "  --height 1080       Image height (minimum 2)\n"
-                        + "  --iterations 1000   Max main.java.Mandelbrot iterations per pixel\n"
-                        + "  --warmups 5         Untimed warm-up runs per configuration\n"
-                        + "  --runs 10           Timed runs per configuration\n"
-                        + "  --threshold 16      Fork/join leaf task size in rows\n"
-                        + "  --csv results.csv   Summary output path (use 'none' to disable)\n"
-                        + "  --image output.png  PNG output path (use 'none' to disable)\n"
-                        + "Example: java main.java.Mandelbrot --threads 1,2,4 --width 800 --height 600 --runs 10");
-                return null;
-            }
             if (++i >= args.length) throw new IllegalArgumentException("Missing value after " + option);
             String value = args[i];
             switch (option) {

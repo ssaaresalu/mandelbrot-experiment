@@ -95,7 +95,6 @@ class MandelbrotTest {
         eq(2, getInt(cfg, "runs"), "runs");
         same(new int[]{1, 2, 4}, (int[]) get(cfg, "threadCounts"), "deduplicated threads");
         yes(get(cfg, "csv") == null && get(cfg, "image") == null, "none disables output");
-        yes(parse("--help") == null, "help returns without benchmarking");
     }
 
     @Test
